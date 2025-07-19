@@ -343,7 +343,7 @@ label {
   margin-bottom: calc(var(--unit) / 2)
 }
 
-button, input[type="submit"], input[type="button"], input[type="reset"] {
+button, input[type="submit"], input[type="button"], input[type="reset"], a[data-button] {
   width: auto;
   height: 2.5em;
   background-color: var(--color-secondary);
@@ -366,25 +366,26 @@ button, input[type="submit"], input[type="button"], input[type="reset"] {
   padding: 8px 10px 7px
 }
 
-input[type="button"] {
+button:hover, input[type="submit"]:hover, a[data-button]:hover {
+  background: var(--color-secondary-hover)
+}
+
+input[type="button"], a[data-button], a[data-button="primary"] {
   background-color: var(--color-primary)
 }
 
-input[type="button"]:hover {
+input[type="button"]:hover, a[data-button="primary"]:hover {
   background-color: var(--color-primary-hover)
 }
 
-input[type="reset"] {
+input[type="reset"], a[data-button="negative"] {
   background-color: var(--color-tertiary)
 }
 
-input[type="reset"]:hover {
+input[type="reset"]:hover, a[data-button="negative"]:hover  {
   background-color: var(--color-tertiary-hover)
 }
 
-button:hover, input[type="submit"]:hover {
-  background: var(--color-secondary-hover)
-}
 
 button:active, input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active {
   transform: translateY(2px)
